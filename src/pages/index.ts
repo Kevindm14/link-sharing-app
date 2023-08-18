@@ -1,1 +1,2 @@
-export { Links } from './links';
+export { Links } from "./links";
+export { Profile } from "./profile";
