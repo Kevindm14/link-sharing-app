@@ -1,9 +1,16 @@
 import { Image } from "../components/icons/image";
 import PhoneViewer from "../components/phone-viewer";
+import { motion } from "framer-motion";
 
 export const Profile = () => {
   return (
-    <div className="flex flex-col-reverse lg:flex-row mt-7 gap-5">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.3 }}
+      className="flex flex-col-reverse lg:flex-row mt-7 gap-5"
+    >
       <div className="bg-white hidden lg:flex lg:w-5/12 justify-center py-20">
         <PhoneViewer />
       </div>
@@ -16,7 +23,7 @@ export const Profile = () => {
           </p>
         </div>
 
-        <div className="bg-[#FAFAFA] py-4 px-5">
+        <div className="bg-[#FAFAFA] py-4 px-5 lg:px-10 lg:grid grid-cols-3 items-center gap-7">
           <h2 className="text-[#ADADAD] font-bold">Profile Picture</h2>
           <div className="w-full h-[200px] bg-purple-100 mt-5 rounded-md flex flex-col gap-2 justify-center items-center text-purple-700 cursor-pointer">
             <Image className="w-10 h-10" />
@@ -30,35 +37,44 @@ export const Profile = () => {
           </p>
         </div>
 
-        <div className="bg-[#FAFAFA] mt-5 py-4 px-5">
+        <div className="bg-[#FAFAFA] mt-5 py-4 px-5 lg:px-10">
           <form className="flex flex-col gap-5">
-            <div className="form-group flex flex-col gap-2">
-              <label htmlFor="" className="text-[#ADADAD] text-sm">
+            <div className="form-group flex flex-col lg:flex-row gap-2 lg:items-center lg:justify-between">
+              <label
+                htmlFor=""
+                className="text-[#ADADAD] text-sm font-semibold"
+              >
                 First Name <span>*</span>
               </label>
               <input
                 type="text"
-                className="py-2 px-5 outline-none transition-all ease-in border border-[#ADADAD] rounded-md focus:shadow-md focus:shadow-purple-700"
+                className="py-2 px-5 outline-none transition-all ease-in border border-[#ADADAD] rounded-md focus:shadow-md focus:shadow-purple-700 lg:w-1/2"
               />
             </div>
 
-            <div className="form-group flex flex-col gap-2">
-              <label htmlFor="" className="text-[#ADADAD] text-sm">
+            <div className="form-group flex flex-col lg:flex-row gap-2 lg:items-center lg:justify-between">
+              <label
+                htmlFor=""
+                className="text-[#ADADAD] text-sm font-semibold"
+              >
                 Last Name <span>*</span>
               </label>
               <input
                 type="text"
-                className="py-2 px-5 outline-none transition-all ease-in border border-[#ADADAD] rounded-md focus:shadow-md focus:shadow-purple-700"
+                className="py-2 px-5 outline-none transition-all ease-in border border-[#ADADAD] rounded-md focus:shadow-md focus:shadow-purple-700 lg:w-1/2"
               />
             </div>
 
-            <div className="form-group flex flex-col gap-2">
-              <label htmlFor="" className="text-[#ADADAD] text-sm">
-                Email <span>*</span>
+            <div className="form-group flex flex-col lg:flex-row gap-2 lg:items-center lg:justify-between">
+              <label
+                htmlFor=""
+                className="text-[#ADADAD] text-sm font-semibold"
+              >
+                Email
               </label>
               <input
                 type="text"
-                className="py-2 px-5 outline-none transition-all ease-in border border-[#ADADAD] rounded-md focus:shadow-md focus:shadow-purple-700"
+                className="py-2 px-5 outline-none transition-all ease-in border border-[#ADADAD] rounded-md focus:shadow-md focus:shadow-purple-700 lg:w-1/2"
               />
             </div>
           </form>
@@ -72,7 +88,7 @@ export const Profile = () => {
           </button>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

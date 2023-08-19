@@ -2,6 +2,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./App.css";
 import { Links, Profile } from "./pages";
 import { Layout } from "./components/layout";
+import { AnimatePresence } from "framer-motion";
 
 const router = createBrowserRouter([
   {
@@ -10,7 +11,7 @@ const router = createBrowserRouter([
     errorElement: <div>404 Not Found</div>,
     children: [
       {
-        path: "",
+        path: "/",
         element: <Links />,
       },
       {
@@ -26,7 +27,11 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <AnimatePresence>
+      <RouterProvider router={router} />
+    </AnimatePresence>
+  );
 }
 
 export default App;

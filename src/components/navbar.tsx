@@ -2,12 +2,13 @@ import { NavLink } from "react-router-dom";
 import Link from "./icons/link";
 import { Profile } from "./icons/profile";
 import { Eye } from "./icons/eye";
+import { Share } from "./icons/share";
 
 export const Navbar = () => {
   return (
     <nav className="bg-white px-7 py-6 flex justify-between rounded-md items-center">
       <div className="flex gap-3 items-center">
-        <Link className="bg-purple-700 text-white rounded-md w-8 h-8" />
+        <Share className="bg-purple-700 text-white rounded-md w-7 h-7 px-1" />
         <h1 className="font-extrabold text-xl text-[#363636] hidden lg:block">
           devlinks
         </h1>
