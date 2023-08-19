@@ -4,13 +4,13 @@
 
 #root {
   background-color: #fafafa;
-  padding: 30px;
+  /* padding: 30px; */
 }
 
 body,
 html {
   background-color: #fafafa;
-  scrollbar-gutter: stable;
+  /* scrollbar-gutter: stable; */
 }
 
 * {
