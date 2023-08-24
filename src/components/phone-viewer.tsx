@@ -7,7 +7,7 @@ export const PhoneViewer = () => {
       <motion.div
         initial={{ y: 500 }}
         animate={{ y: 0 }}
-        className="phone-viewer flex flex-col items-center py-20"
+        className="phone-viewer flex flex-col items-center py-20 bg-white"
       >
         <div className="w-[100px] h-[100px] rounded-full bg-gray-100 mb-20">
           <img src="" alt="" />

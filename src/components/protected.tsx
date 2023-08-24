@@ -1,17 +1,12 @@
 import { Navigate } from "react-router-dom";
-import { supabase } from "../libraries/supabase";
+import useAuthStore from "./store/AuthStore";
 
 type Props = {
   children: JSX.Element;
 };
 
 export const Protected: React.FC<Props> = ({ children }) => {
-  const data = null;
-  supabase.auth.getSession().then((data) => (data = data));
+  const session = useAuthStore((state) => state.session);
 
-  return data?.data.session != null ? (
-    children
-  ) : (
-    <Navigate to="/login" replace />
-  );
+  return session?.access_token ? children : <Navigate to="/login" replace />;
 };

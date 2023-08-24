@@ -6,7 +6,7 @@ import { Share } from "./icons/share";
 
 export const Navbar = () => {
   return (
-    <nav className="bg-white px-7 py-6 flex justify-between rounded-md items-center">
+    <nav className="bg-white px-7 py-6 flex justify-between rounded-2xl items-center my-5 mx-5 sticky top-0 z-20 shadow-sm">
       <div className="flex gap-3 items-center">
         <Share className="bg-purple-700 text-white rounded-md w-7 h-7 px-1" />
         <h1 className="font-extrabold text-xl text-[#363636] hidden lg:block">
@@ -21,7 +21,7 @@ export const Navbar = () => {
           className={({ isActive }) =>
             isActive
               ? "flex gap-1 bg-purple-100 text-purple-700 py-2 px-5 rounded-md"
-              : "flex gap-1 py-2 px-5 text-[#ADADAD]"
+              : "flex gap-1 py-2 px-5 text-[#ADADAD] hover:bg-[#FAFAFA] rounded-md"
           }
         >
           <Link />
@@ -33,7 +33,7 @@ export const Navbar = () => {
           className={({ isActive }) =>
             isActive
               ? "flex gap-1 bg-purple-100 text-purple-700 py-2 px-5 rounded-md"
-              : "flex gap-1 py-2 px-5 text-[#ADADAD]"
+              : "flex gap-1 py-2 px-5 text-[#ADADAD] hover:bg-[#FAFAFA] rounded-md"
           }
         >
           <Profile />

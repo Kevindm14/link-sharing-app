@@ -9,7 +9,7 @@ export const Profile = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}
-      className="flex flex-col-reverse lg:flex-row mt-7 gap-5"
+      className="flex flex-col-reverse lg:flex-row mt-7 gap-5 mx-5"
     >
       <div className="bg-white hidden lg:flex lg:w-5/12 justify-center py-20">
         <PhoneViewer />

@@ -2,15 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
 #root {
-  background-color: #fafafa;
-  /* padding: 30px; */
+  background-color: #f3f3f1;
 }
 
 body,
 html {
-  background-color: #fafafa;
-  /* scrollbar-gutter: stable; */
+  background-color: #f3f3f1;
+  scrollbar-gutter: stable both-edges;
 }
 
 * {
