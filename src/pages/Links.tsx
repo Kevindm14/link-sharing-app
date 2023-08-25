@@ -26,11 +26,11 @@ export const Links = () => {
       exit={{ opacity: 0, transition: { duration: 0.3 } }}
       className="flex flex-col-reverse lg:flex-row gap-5 mb-10 mx-5"
     >
-      <div className="hidden lg:flex lg:w-5/12 justify-center py-20">
+      <div className="bg-white rounded-2xl shadow-sm hidden lg:flex lg:w-5/12 justify-center py-20">
         <PhoneViewer />
       </div>
 
-      <div className="bg-white w-full lg:w-7/12 py-6 rounded-md shadow-sm max-h-[800px]">
+      <div className="bg-white w-full lg:w-7/12 py-6 rounded-2xl shadow-sm max-h-[800px]">
         <div className="h-1/4 px-7">
           <motion.h1
             initial={{ y: 10, opacity: 0 }}
@@ -71,7 +71,7 @@ export const Links = () => {
             <div className="flex justify-start lg:justify-end mx-7">
               <button
                 type="submit"
-                className="bg-purple-700 text-white px-5 py-2 rounded-md font-bold w-full mt-5"
+                className="bg-purple-700 text-white px-5 py-2 rounded-md font-bold w-full lg:w-20 mt-5"
               >
                 Save
               </button>

@@ -11,11 +11,11 @@ export const Profile = () => {
       transition={{ duration: 0.3 }}
       className="flex flex-col-reverse lg:flex-row mt-7 gap-5 mx-5"
     >
-      <div className="bg-white hidden lg:flex lg:w-5/12 justify-center py-20">
+      <div className="bg-white hidden lg:flex lg:w-5/12 justify-center py-20 rounded-2xl">
         <PhoneViewer />
       </div>
 
-      <div className="bg-white w-full lg:w-7/12 py-6 px-7 rounded-md">
+      <form className="bg-white w-full lg:w-7/12 py-6 px-7 rounded-2xl">
         <div className="">
           <h1 className="font-bold text-2xl text-[#363636]">Profile Details</h1>
           <p className="text-[#ADADAD] text-sm mt-2 mb-10">
@@ -38,7 +38,7 @@ export const Profile = () => {
         </div>
 
         <div className="bg-[#FAFAFA] mt-5 py-4 px-5 lg:px-10">
-          <form className="flex flex-col gap-5">
+          <div className="flex flex-col gap-5">
             <div className="form-group flex flex-col lg:flex-row gap-2 lg:items-center lg:justify-between">
               <label
                 htmlFor=""
@@ -77,17 +77,20 @@ export const Profile = () => {
                 className="py-2 px-5 outline-none transition-all ease-in border border-[#ADADAD] rounded-md focus:shadow-md focus:shadow-purple-700 lg:w-1/2"
               />
             </div>
-          </form>
+          </div>
         </div>
 
         <hr className="mt-10" />
 
         <div className="flex justify-end mt-10">
-          <button className="bg-purple-700 py-2 px-5 rounded-md text-white">
+          <button
+            className="bg-purple-700 py-2 px-5 rounded-md text-white w-full lg:w-20"
+            type="submit"
+          >
             Save
           </button>
         </div>
-      </div>
+      </form>
     </motion.div>
   );
 };

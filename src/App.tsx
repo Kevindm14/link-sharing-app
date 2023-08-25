@@ -7,6 +7,7 @@ import { Error } from "./pages/error";
 import { Protected } from "./components/protected";
 import { Login } from "./pages/login";
 import { SignUp } from "./pages/signup";
+import Preview from "./pages/Preview";
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,14 @@ const router = createBrowserRouter([
         ),
       },
     ],
+  },
+  {
+    path: "/preview",
+    element: (
+      <Protected>
+        <Preview />
+      </Protected>
+    ),
   },
 ]);
 

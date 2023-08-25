@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer utilities {
+  .bg-purple-dark {
+    background-color: #633bfe;
+  }
+
   /* Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {
     display: none;
@@ -14,14 +18,12 @@
   }
 }
 
+body,
+html,
 #root {
   background-color: #f3f3f1;
-}
-
-body,
-html {
-  background-color: #f3f3f1;
-  scrollbar-gutter: stable both-edges;
+  height: 100%;
+  /* scrollbar-gutter: stable both-edges; */
 }
 
 * {
